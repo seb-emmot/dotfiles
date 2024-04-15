@@ -79,5 +79,5 @@ if ! shopt -oq posix; then
 fi
 
 # config alias
-alias config='/usr/bin/git --git-dir=/home/sebastian/.cfg/ --work-tree=/home/sebastian'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 export PATH=$PATH:/usr/local/go/bin
