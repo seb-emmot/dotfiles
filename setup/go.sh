@@ -6,6 +6,12 @@ then
     exit 1
 fi
 
+if command -v go &> /dev/null
+then
+    cur_ver=$(go version)
+    echo "current version is:" $cur_ver
+fi
+
 version=$(curl -s https://go.dev/dl/?mode=json | jq -r '.[0].version')
 arch=linux-amd64
 inst_loc="/usr/local"
